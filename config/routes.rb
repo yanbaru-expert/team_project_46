@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root 'homes#index'
+  root 'texts#index'
 end
