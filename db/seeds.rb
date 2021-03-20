@@ -8,4 +8,5 @@ end
 
 require "csv"
 
-ImportCsv.movie_data
+movie_path = "db/csv_data/movie_data.csv"
+ImportCsv.movie_data(movie_path)

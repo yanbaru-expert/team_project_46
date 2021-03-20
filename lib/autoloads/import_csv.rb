@@ -11,8 +11,8 @@ class ImportCsv
     list
   end
   
-  def self.movie_data
-    list = import("db/csv_data/movie_data.csv")
+  def self.movie_data(path)
+    list = import(path)
     puts "Movieテーブルのデータを削除"
     Movie.destroy_all
     puts "インポート処理を開始"
