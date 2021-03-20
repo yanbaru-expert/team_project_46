@@ -2,6 +2,7 @@ class Text < ApplicationRecord
   validates :genre, presence: true
   validates :title, presence: true
   validates :content, presence: true
+<<<<<<< HEAD
 
   enum genre: {
     invisible: 0, # 非表示
@@ -21,4 +22,6 @@ class Text < ApplicationRecord
     talk: 14, #全ての勉強会
     live: 15, #勉強会
   }
+=======
+>>>>>>> origin/feature/variate
 end

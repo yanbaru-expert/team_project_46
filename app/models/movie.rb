@@ -2,6 +2,7 @@ class Movie < ApplicationRecord
   validates :genre, presence: true
   validates :title, presence: true
   validates :url, presence: true
+<<<<<<< HEAD
 
 
   enum genre: {
@@ -23,4 +24,6 @@ class Movie < ApplicationRecord
     live: 15, #勉強会
   }
 
+=======
+>>>>>>> origin/feature/variate
 end
