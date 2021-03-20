@@ -6,6 +6,8 @@ User.find_or_create_by!(email: EMAIL) do |user|
   puts 'ユーザーの初期データインポートに成功しました。'
 end
 
+require "csv"
+
 class ImportCsv
   def self.movie_import(path)
     list = []
