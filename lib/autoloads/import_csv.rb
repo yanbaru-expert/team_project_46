@@ -1,5 +1,5 @@
 class ImportCsv
-  def self.movie_import(path)
+  def self.import(path)
     list = []
     CSV.foreach(path, headers: true) do |row|
       list << {
@@ -12,7 +12,7 @@ class ImportCsv
   end
   
   def self.movie_data
-    list = movie_import("db/csv_data/movie_data.csv")
+    list = import("db/csv_data/movie_data.csv")
     puts "Movieテーブルのデータを削除"
     Movie.destroy_all
     puts "インポート処理を開始"
