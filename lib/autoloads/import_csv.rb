@@ -2,11 +2,8 @@ class ImportCsv
   def self.import(path)
     list = []
     CSV.foreach(path, headers: true) do |row|
-      list << {
-        genre: row["genre"].to_i,
-        title: row["title"],
-        url: row["url"] 
-      }
+      row["genre"] = row["genre"].to_i
+      list << row.to_h
     end
     list
   end
