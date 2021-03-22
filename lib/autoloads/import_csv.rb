@@ -9,7 +9,7 @@ class ImportCsv
           val
         end
       end
-      list << data    
+      list << data
     end
     list
   end
