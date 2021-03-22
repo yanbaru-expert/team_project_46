@@ -3,11 +3,7 @@ class ImportCsv
     list = []
     CSV.foreach(path, headers: true) do |row|
       data = row.to_h.transform_values do |val|
-        if /^[0-9]+$/ =~ val
-          val.to_i
-        else
-          val
-        end
+        /^[0-9]+$/ =~ val ? val.to_i : val
       end
       list << data
     end
