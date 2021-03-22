@@ -2,8 +2,14 @@ class ImportCsv
   def self.import(path)
     list = []
     CSV.foreach(path, headers: true) do |row|
-      row["genre"] = row["genre"].to_i
-      list << row.to_h
+      data = row.to_h.transform_values do |val|
+        if /^[0-9]+$/ =~ val
+          val.to_i
+        else
+          val
+        end
+      end
+      list << data    
     end
     list
   end
