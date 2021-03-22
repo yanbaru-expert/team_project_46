@@ -18,6 +18,7 @@
         <%= link_to "新規登録", new_user_registration_path %>
         <%= link_to "ログイン", new_user_session_path %>
       <% end %>
+      <%= render "layouts/flash" %>
     </header>
     <main>
       <#% max_width メソッドは application_helper.rb に記載 %>
