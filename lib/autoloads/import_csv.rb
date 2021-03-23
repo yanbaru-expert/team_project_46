@@ -1,3 +1,5 @@
+require "csv"
+
 class ImportCsv
   def self.import(path)
     list = []
@@ -7,13 +9,12 @@ class ImportCsv
       end
       list << data
     end
-    binding.pry
     list
   end
   
   def self.movie_data(path)
     list = import(path)
-    puts "Movieテーブルのデータを削除"
+    puts "moviesテーブルのデータを削除"
     Movie.destroy_all
     puts "インポート処理を開始"
     Movie.create!(list)

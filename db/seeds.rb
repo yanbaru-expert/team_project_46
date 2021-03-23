@@ -6,7 +6,5 @@ User.find_or_create_by!(email: EMAIL) do |user|
   puts 'ユーザーの初期データインポートに成功しました。'
 end
 
-require "csv"
-
 movie_path = "db/csv_data/movie_data.csv"
 ImportCsv.movie_data(movie_path)
