@@ -8,3 +8,4 @@ end
 
 movie_path = "db/csv_data/movie_data.csv"
 ImportCsv.movie_data(movie_path)
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
