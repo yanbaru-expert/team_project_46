@@ -75,12 +75,16 @@
       </li>
 
       <% if user_signed_in? %>
-        <li class="nav-item active">
-        <%= link_to "アカウント編集", edit_user_registration_path, class: "nav-item nav-link active"%>
-        </li>
-        <li class="nav-item active">
-        <%= link_to "ログアウト", destroy_user_session_path, class: "nav-item nav-link active", method: :delete, data: { confirm: "ログアウトしますか？" } %>
-        </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          マイページ
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">進捗管理</a>
+          <%= link_to "アカウント編集", edit_user_registration_path, class:"dropdown-item" %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"dropdown-item", data: { confirm: "ログアウトしますか？" } %>
+        </div>
+      </li>
       <% else %>
         <li class="nav-item active">
         <%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link active" %>
