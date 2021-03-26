@@ -35,3 +35,15 @@
 .alert-alert {
   @extend .alert-danger;
 }
+
+.navbar {
+  margin: 0 auto;
+  max-width: 970px;
+}
+
+.navbar-nav {
+  font-size: 14px;
+}
+
+body {
+  padding-top: 56px;
