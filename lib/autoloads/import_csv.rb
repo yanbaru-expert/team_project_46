@@ -20,4 +20,12 @@ class ImportCsv
     Movie.create!(list)
     puts "インポート完了!!"
   end
+
+  def self.text_data(path)
+    list = import(path)
+    puts "インポート処理を開始"
+    Text.destroy_all
+    Text.create!(list)
+    puts "インポート完了！！"
+  end
 end
