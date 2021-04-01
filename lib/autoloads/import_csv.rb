@@ -11,7 +11,7 @@ class ImportCsv
     end
     list
   end
-  
+
   def self.movie_data(path)
     list = import(path)
     puts "moviesテーブルのデータを削除"
@@ -19,5 +19,14 @@ class ImportCsv
     puts "インポート処理を開始"
     Movie.create!(list)
     puts "インポート完了!!"
+  end
+
+  def self.text_data(path)
+    list = import(path)
+    puts "textsテーブルのデータを削除"
+    Text.destroy_all
+    puts "インポート処理を開始"
+    Text.create!(list)
+    puts "インポート完了！！"
   end
 end
