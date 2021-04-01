@@ -8,6 +8,7 @@
 /* 全体 */
 
 .base-container {
+  @extend .container-fluid;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -24,4 +25,26 @@
 
 .mw-xl {
   max-width: 1200px;
+}
+
+// フラッシュ
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
+
+.navbar {
+  margin: 0 auto;
+  max-width: 970px;
+}
+
+.navbar-nav {
+  font-size: 14px;
+}
+
+body {
+  padding-top: 56px;
 }
