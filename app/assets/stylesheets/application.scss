@@ -27,6 +27,17 @@
   max-width: 1200px;
 }
 
+div.text-card-container {
+  padding-left: 9px;
+  padding-right: 9px;
+  margin-bottom: 50px;
+}
+
+div.content-card {
+  height: 370px;
+  max-width: 376px;
+  margin: 0 auto;
+}
 // フラッシュ
 .alert-notice {
   @extend .alert-info;
@@ -47,4 +58,10 @@
 
 body {
   padding-top: 56px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px 0px 10px 0px;
 }
