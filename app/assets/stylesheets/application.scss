@@ -8,9 +8,8 @@
 /* 全体 */
 
 .base-container {
-  @extend .container-fluid;
-  margin: 0 auto;
-  padding: 1rem;
+  margin: 7%;
+  padding: 30px;
 }
 
 /* max-width */
@@ -38,6 +37,7 @@ div.content-card {
   max-width: 376px;
   margin: 0 auto;
 }
+
 // フラッシュ
 .alert-notice {
   @extend .alert-info;
@@ -58,6 +58,10 @@ div.content-card {
 
 body {
   padding-top: 56px;
+}
+
+.text-title {
+  margin-top: 30px;
 }
 
 h1 {
