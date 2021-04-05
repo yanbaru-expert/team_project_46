@@ -12,20 +12,16 @@
   padding: 30px;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* max-width */
 
-.mw-md {
-  max-width: 720px;
-}
-
-.mw-lg {
-  max-width: 960px;
-}
-
-.mw-xl {
-  max-width: 1200px;
+@each $breakpoint in map-keys($grid-breakpoints) {
+  .mw-#{$breakpoint} {
+    max-width: var(--breakpoint-#{$breakpoint});
+  }
 }
 
 div.text-card-container {
@@ -35,20 +31,10 @@ div.text-card-container {
 }
 
 div.content-card {
-  height: 370px;
+  height: 0px;
   max-width: 376px;
   margin: 0 auto;
 }
-
-// フラッシュ
-.alert-notice {
-  @extend .alert-info;
-}
-
-.alert-alert {
-  @extend .alert-danger;
-}
-
 .navbar {
   margin: 0 auto;
   max-width: 970px;
@@ -61,7 +47,6 @@ div.content-card {
 body {
   padding-top: 56px;
 }
-
 .text-title {
   margin-top: 30px;
 }
@@ -70,4 +55,13 @@ h1 {
   text-align: center;
   font-size: 2rem;
   padding: 20px 0px 10px 0px;
+}
+
+// フラッシュ
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
 }
