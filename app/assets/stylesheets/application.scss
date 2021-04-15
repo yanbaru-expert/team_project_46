@@ -8,20 +8,73 @@
 /* 全体 */
 
 .base-container {
-  margin: 0 auto;
-  padding: 1rem;
+  margin: 7%;
+  padding: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* max-width */
 
-.mw-md {
-  max-width: 720px;
+@each $breakpoint in map-keys($grid-breakpoints) {
+  .mw-#{$breakpoint} {
+    max-width: var(--breakpoint-#{$breakpoint});
+  }
 }
 
-.mw-lg {
-  max-width: 960px;
+div.text-card-container {
+  padding-left: 9px;
+  padding-right: 9px;
+  margin-bottom: 50px;
 }
 
-.mw-xl {
-  max-width: 1200px;
+div.content-card {
+  height: 0px;
+  max-width: 376px;
+  margin: 0 auto;
+}
+.navbar {
+  margin: 0 auto;
+  max-width: 970px;
+}
+
+.navbar-nav {
+  font-size: 14px;
+}
+
+body {
+  padding-top: 56px;
+}
+
+ feature/login
+.text-title {
+  margin-top: 30px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px 0px 10px 0px;
+}
+
+// フラッシュ
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+
+div.text-card-container {
+  padding-left: 9px;
+  padding-right: 9px;
+  margin-bottom: 80px;
+}
+
+div.content-card {
+  height: 300px;
+  max-width: 360px;
+  margin: 0 auto;
 }

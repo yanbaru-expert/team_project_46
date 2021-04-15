@@ -15,3 +15,5 @@ end
 movie_path = "db/csv_data/movie_data.csv"
 ImportCsv.movie_data(movie_path)
 
+text_path = "db/csv_data/text_data.csv"
+ImportCsv.text_data(text_path)
