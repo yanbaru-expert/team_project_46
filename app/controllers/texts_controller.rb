@@ -4,6 +4,6 @@ class TextsController < ApplicationController
   end
 
   def show
-    @texts = Text.where(content: ["basic", "git", "html&css", "ruby", "rails"] )
+    @texts = Text.where(genre: ["basic", "git", "html&css", "ruby", "rails"])
   end
 end
