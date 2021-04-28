@@ -4,6 +4,6 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movies = Movie.where(content: ["basic", "git", "ruby", "rails"])
+    @movie = Movie.find(params[:id])
   end
 end
