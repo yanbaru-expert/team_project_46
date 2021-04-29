@@ -48,6 +48,7 @@ body {
   padding-top: 56px;
 }
 
+
 .text-title {
   margin-top: 30px;
 }
@@ -77,4 +78,10 @@ div.content-card {
   height: 300px;
   max-width: 360px;
   margin: 0 auto;
+}
+.card-body{
+  color: black;
+}
+a:hover{
+  text-decoration: none;
 }
